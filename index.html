@@ -79,7 +79,8 @@
                             <i data-lucide="calendar" class="h-4 w-4 text-slate-500"></i>
                         </div>
                         <select id="period-selector" class="custom-select bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-brand-500 focus:border-brand-500 block w-full pl-10 p-2.5 font-medium">
-                            <option value="nov2025" selected>Novembro 2025</option>
+                            <option value="dez2025" selected>Dezembro 2025</option>
+                            <option value="nov2025">Novembro 2025</option>
                             <option value="out2025">Outubro 2025</option>
                         </select>
                     </div>
@@ -260,6 +261,49 @@
         // ==========================================
 
         const datasets = {
+            'dez2025': {
+                total: 119,
+                data: [
+                    { name: "BODY SPLASH. WEPINK (BRINDE)", quantity: 14, percentage: 0.1176 },
+                    { name: "BOTICARIO(BRINDE)", quantity: 22, percentage: 0.1849 },
+                    { name: "CAPA REALME C51/C53", quantity: 2, percentage: 0.0168 },
+                    { name: "CAPA REALME C67", quantity: 1, percentage: 0.0084 },
+                    { name: "CAPA REDMI A5/ POCO C71", quantity: 2, percentage: 0.0168 },
+                    { name: "CARREGADOR 20W KD 108C KAIDI", quantity: 1, percentage: 0.0084 },
+                    { name: "CHIP CLARO PREZÃO", quantity: 1, percentage: 0.0084 },
+                    { name: "CHIP VIVO PRE C REGARGA", quantity: 9, percentage: 0.0756 },
+                    { name: "COPO STANLEY (BRINDE)", quantity: 1, percentage: 0.0084 },
+                    { name: "DESCONTO FUNCIONÁRIO", quantity: 1, percentage: 0.0084 },
+                    { name: "DESCONTO NA VENDA", quantity: 2, percentage: 0.0168 },
+                    { name: "FONE BLUETOOTH REDMI AIRDOTS (BRINDE)", quantity: 2, percentage: 0.0168 },
+                    { name: "HONOR X6C 6/256 OCEAN CYAN", quantity: 1, percentage: 0.0084 },
+                    { name: "HONOR X7C 8/256 FOREST GREEN", quantity: 0, percentage: 0.0000 },
+                    { name: "HONOR X7C 8/256 MOONLIGHT WHITE", quantity: 7, percentage: 0.0588 },
+                    { name: "HONOR X7D 8/256 METEOR SILVER", quantity: 1, percentage: 0.0084 },
+                    { name: "HONOR X7D 8/256 OCEAN CYAN", quantity: 2, percentage: 0.0168 },
+                    { name: "HONOR X7D 8/256 VELVET BLACK", quantity: 1, percentage: 0.0084 },
+                    { name: "MOTO G05 4/128 VERDE", quantity: 5, percentage: 0.0420 },
+                    { name: "MOTO G05 4/128 VERMELHO", quantity: 1, percentage: 0.0084 },
+                    { name: "MOTO G15 4/128 CINZA", quantity: 1, percentage: 0.0084 },
+                    { name: "MOTO G15 8/256 GRAVITY GRAY", quantity: 1, percentage: 0.0084 },
+                    { name: "MOTO G15 8/256 SEA BLUE", quantity: 1, percentage: 0.0084 },
+                    { name: "MOTO G56 5G 8/256 BLUE OYSTER", quantity: 1, percentage: 0.0084 },
+                    { name: "MOTO G56 5G 8/256 GRAY MIST", quantity: 1, percentage: 0.0084 },
+                    { name: "MOTOROLA EDGE 50 5G FUSION 8/256 HOT PINK", quantity: 1, percentage: 0.0084 },
+                    { name: "PELICULA HD HYDROGEL STANDARD", quantity: 15, percentage: 0.1261 },
+                    { name: "REALME C63 8/256 JADE GREEN", quantity: 2, percentage: 0.0168 },
+                    { name: "REALME C67 8/256 BLACK ROCK", quantity: 1, percentage: 0.0084 },
+                    { name: "REALME C71 8/256 WHITE SWAN", quantity: 5, percentage: 0.0420 },
+                    { name: "REALME C75 8/256 RUBY RED", quantity: 2, percentage: 0.0168 },
+                    { name: "REALME C75X 8/256 CORAL PINK", quantity: 2, percentage: 0.0168 },
+                    { name: "REALME C75X 8/256 OCEANIC BLUE", quantity: 2, percentage: 0.0168 },
+                    { name: "REALME NOTE 60 4/128 MARBLE BLACK", quantity: 1, percentage: 0.0084 },
+                    { name: "REDMI A5 4/128 AZUL", quantity: 2, percentage: 0.0168 },
+                    { name: "REDMI A5 4/128 GOLD", quantity: 1, percentage: 0.0084 },
+                    { name: "REDMI A5 4/128 PRETO", quantity: 3, percentage: 0.0252 },
+                    { name: "REDMI NOTE 14 8/256 MIST PURPLE", quantity: 1, percentage: 0.0084 }
+                ]
+            },
             'nov2025': {
                 total: 113, // Total atualizado
                 data: [
@@ -550,12 +594,21 @@
             const data = periodData.data;
             
             // UI Updates
-            const label = period === 'nov2025' ? 'Novembro 2025' : 'Outubro 2025';
+            let label = '';
+            if (period === 'nov2025') label = 'Novembro 2025';
+            else if (period === 'out2025') label = 'Outubro 2025';
+            else if (period === 'dez2025') label = 'Dezembro 2025';
+            
             document.getElementById('page-title').innerText = `Visão Geral - ${label}`;
             
             // Badge visual de crescimento
             const growthEl = document.getElementById('growth-badge');
-            if (period === 'nov2025') {
+            
+            if (period === 'dez2025') {
+                 // Dez: 119, Nov: 113. (119-113)/113 = +5.31%
+                 growthEl.className = "text-xs font-semibold text-green-600 bg-green-50 px-2 py-1 rounded-full";
+                 growthEl.innerText = "+5.3% vs. Novembro";
+            } else if (period === 'nov2025') {
                  // Nov: 113, Oct: 97. (113-97)/97 = +16.49%
                  growthEl.className = "text-xs font-semibold text-green-600 bg-green-50 px-2 py-1 rounded-full";
                  growthEl.innerText = "+16.5% vs. Outubro"; 
@@ -603,7 +656,7 @@
         // --- Init ---
         
         (function init() {
-            loadPeriod('nov2025');
+            loadPeriod('dez2025');
         })();
 
     </script>
