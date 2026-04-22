@@ -1,12 +1,153 @@
-﻿{
-    "_instrucoes": "Para adicionar um novo mês: copie um bloco existente (ex: fev2026), altere a chave (ex: \u0027mar2026\u0027), \u0027label\u0027, \u0027total\u0027 e \u0027data\u0027. Certifique que a nova chave está no INÍCIO de \u0027_ordem_exibicao\u0027. Salve e recarregue o dashboard.",
+{
+    "_instrucoes": "Para adicionar um novo mês: copie um bloco existente (ex: fev2026), altere a chave (ex: 'mar2026'), 'label', 'total' e 'data'. Certifique que a nova chave está no INÍCIO de '_ordem_exibicao'. Salve e recarregue o dashboard.",
     "_ordem_exibicao": [
+        "mar2026",
         "fev2026",
         "jan2026",
         "dez2025",
         "nov2025",
         "out2025"
     ],
+    "mar2026": {
+        "total": 86,
+        "data": [
+            {
+                "name": "BOTICARIO(BRINDE)",
+                "quantity": 3,
+                "percentage": 0.0349
+            },
+            {
+                "name": "CAPA REALME C51/C53",
+                "quantity": 2,
+                "percentage": 0.0233
+            },
+            {
+                "name": "CARREGADOR HONOR 66W COMPLETO",
+                "quantity": 1,
+                "percentage": 0.0116
+            },
+            {
+                "name": "CARREGADOR MOTOROLA 50W",
+                "quantity": 1,
+                "percentage": 0.0116
+            },
+            {
+                "name": "CHIP CLARO PREZÃO",
+                "quantity": 8,
+                "percentage": 0.0930
+            },
+            {
+                "name": "CHIP VIVO PRE C REGARGA",
+                "quantity": 3,
+                "percentage": 0.0349
+            },
+            {
+                "name": "COPO STANLEY (BRINDE)",
+                "quantity": 9,
+                "percentage": 0.1047
+            },
+            {
+                "name": "DESCONTO VENDA",
+                "quantity": 1,
+                "percentage": 0.0116
+            },
+            {
+                "name": "FONE BLUETOOTH REDMI AIRDOTS (BRINDE)",
+                "quantity": 9,
+                "percentage": 0.1047
+            },
+            {
+                "name": "HONOR X5C PLUS 4/256 MIDNIGHT BLACK",
+                "quantity": 2,
+                "percentage": 0.0233
+            },
+            {
+                "name": "HONOR X7D 8/256 DESERT GOLD",
+                "quantity": 4,
+                "percentage": 0.0465
+            },
+            {
+                "name": "HONOR X7D 8/256 OCEAN CYAN",
+                "quantity": 4,
+                "percentage": 0.0465
+            },
+            {
+                "name": "IPHONE 13 PRO MAX 128G BRANCO",
+                "quantity": 1,
+                "percentage": 0.0116
+            },
+            {
+                "name": "MOTO G05 4/128 VERDE",
+                "quantity": 4,
+                "percentage": 0.0465
+            },
+            {
+                "name": "MOTO G05 4/128 VERMELHO",
+                "quantity": 1,
+                "percentage": 0.0116
+            },
+            {
+                "name": "MOTO G15 4/128 CINZA",
+                "quantity": 5,
+                "percentage": 0.0581
+            },
+            {
+                "name": "MOTO G15 4/128 VERDE",
+                "quantity": 3,
+                "percentage": 0.0349
+            },
+            {
+                "name": "MOTO G15 4/256 CINZA",
+                "quantity": 1,
+                "percentage": 0.0116
+            },
+            {
+                "name": "MOTO G15 8/256 GRAVITY GRAY",
+                "quantity": 1,
+                "percentage": 0.0116
+            },
+            {
+                "name": "MOTO G56 5G 8/256 BLUE OYSTER",
+                "quantity": 1,
+                "percentage": 0.0116
+            },
+            {
+                "name": "MOTOROLA EDGE 60 5G FUSION 8/256 GREEN",
+                "quantity": 1,
+                "percentage": 0.0116
+            },
+            {
+                "name": "PELICULA HD HYDROGEL STANDARD",
+                "quantity": 6,
+                "percentage": 0.0698
+            },
+            {
+                "name": "REALME C71 8/256 FOREST OWL",
+                "quantity": 2,
+                "percentage": 0.0233
+            },
+            {
+                "name": "REALME C71 8/256 WHITE SWAN",
+                "quantity": 5,
+                "percentage": 0.0581
+            },
+            {
+                "name": "REALME C85 8/256 KINGFISHER BLUE",
+                "quantity": 4,
+                "percentage": 0.0465
+            },
+            {
+                "name": "REALME C85 8/256 SWAN BLACK",
+                "quantity": 2,
+                "percentage": 0.0233
+            },
+            {
+                "name": "REALME NOTE 70 4/128 OBSIDIAN BLACK",
+                "quantity": 2,
+                "percentage": 0.0233
+            }
+        ]
+    },
     "fev2026": {
         "total": 118,
         "data": [
