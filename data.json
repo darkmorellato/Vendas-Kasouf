@@ -1,6 +1,8 @@
 {
     "_instrucoes": "Para adicionar um novo mês: copie um bloco existente (ex: fev2026), altere a chave (ex: 'mar2026'), 'label', 'total' e 'data'. Certifique que a nova chave está no INÍCIO de '_ordem_exibicao'. Salve e recarregue o dashboard.",
     "_ordem_exibicao": [
+        "maio2026",
+        "abril2026",
         "mar2026",
         "fev2026",
         "jan2026",
@@ -8,6 +10,221 @@
         "nov2025",
         "out2025"
     ],
+    "abril2026": {
+        "total": 75,
+        "data": [
+            {
+                "name": "CARREGADOR MOTOROLA 50W",
+                "quantity": 2,
+                "percentage": 0.02666666667
+            },
+            {
+                "name": "CHIP CLARO PREZÃO",
+                "quantity": 1,
+                "percentage": 0.01333333333
+            },
+            {
+                "name": "CHIP VIVO PRE C REGARGA",
+                "quantity": 7,
+                "percentage": 0.09333333333
+            },
+            {
+                "name": "COPO STANLEY (BRINDE)",
+                "quantity": 11,
+                "percentage": 0.14666666667
+            },
+            {
+                "name": "FONE BLUETOOTH REDMI AIRDOTS (BRINDE)",
+                "quantity": 15,
+                "percentage": 0.2
+            },
+            {
+                "name": "HONOR X5C PLUS 4/256 MIDNIGHT BLACK",
+                "quantity": 5,
+                "percentage": 0.06666666667
+            },
+            {
+                "name": "HONOR X7D 8/256 DESERT GOLD",
+                "quantity": 6,
+                "percentage": 0.08
+            },
+            {
+                "name": "HONOR X7D 8/256 OCEAN CYAN",
+                "quantity": 2,
+                "percentage": 0.02666666667
+            },
+            {
+                "name": "HONOR X7D 8/256 VELVET BLACK",
+                "quantity": 2,
+                "percentage": 0.02666666667
+            },
+            {
+                "name": "MOTO G05 4/128 VERMELHO",
+                "quantity": 2,
+                "percentage": 0.02666666667
+            },
+            {
+                "name": "MOTO G15 4/128 VERDE",
+                "quantity": 1,
+                "percentage": 0.01333333333
+            },
+            {
+                "name": "MOTO G15 4/256 CINZA",
+                "quantity": 1,
+                "percentage": 0.01333333333
+            },
+            {
+                "name": "MOTO G15 8/256 GRAVITY GRAY",
+                "quantity": 1,
+                "percentage": 0.01333333333
+            },
+            {
+                "name": "MOTO G15 8/256 SEA BLUE",
+                "quantity": 1,
+                "percentage": 0.01333333333
+            },
+            {
+                "name": "PELICULA HD HYDROGEL STANDARD",
+                "quantity": 4,
+                "percentage": 0.05333333333
+            },
+            {
+                "name": "REALME C67 8/256 ** S/NFC **BLACK ROCK",
+                "quantity": 2,
+                "percentage": 0.02666666667
+            },
+            {
+                "name": "REALME C71 8/256 FOREST OWL",
+                "quantity": 4,
+                "percentage": 0.05333333333
+            },
+            {
+                "name": "REALME C71 8/256 WHITE SWAN",
+                "quantity": 3,
+                "percentage": 0.04
+            },
+            {
+                "name": "REALME C85 8/256 KINGFISHER BLUE",
+                "quantity": 1,
+                "percentage": 0.01333333333
+            },
+            {
+                "name": "REALME C85 8/256 SWAN BLACK",
+                "quantity": 3,
+                "percentage": 0.04
+            },
+            {
+                "name": "TAXA DO CARTÃO",
+                "quantity": 1,
+                "percentage": 0.01333333333
+            }
+        ]
+    },
+    "maio2026": {
+        "total": 71,
+        "data": [
+            {
+                "name": "CARREGADOR MOTOROLA 50W",
+                "quantity": 1,
+                "percentage": 0.01408450704
+            },
+            {
+                "name": "CHIP CLARO PREZÃO",
+                "quantity": 7,
+                "percentage": 0.0985915493
+            },
+            {
+                "name": "CHIP VIVO PRE C REGARGA",
+                "quantity": 1,
+                "percentage": 0.01408450704
+            },
+            {
+                "name": "COPO STANLEY (BRINDE)",
+                "quantity": 8,
+                "percentage": 0.11267605634
+            },
+            {
+                "name": "FONE BLUETOOTH REDMI AIRDOTS (BRINDE)",
+                "quantity": 16,
+                "percentage": 0.22535211268
+            },
+            {
+                "name": "HONOR X5C 4/128 OCEAN CYAN",
+                "quantity": 5,
+                "percentage": 0.07042253521
+            },
+            {
+                "name": "HONOR X7D 8/256 DESERT GOLD",
+                "quantity": 4,
+                "percentage": 0.05633802817
+            },
+            {
+                "name": "HONOR X7D 8/256 OCEAN CYAN",
+                "quantity": 3,
+                "percentage": 0.04225352113
+            },
+            {
+                "name": "HONOR X7D 8/256 VELVET BLACK",
+                "quantity": 6,
+                "percentage": 0.08450704225
+            },
+            {
+                "name": "MOTO G15 4/256 CINZA",
+                "quantity": 3,
+                "percentage": 0.04225352113
+            },
+            {
+                "name": "MOTO G15 4/256 VERDE",
+                "quantity": 2,
+                "percentage": 0.02816901408
+            },
+            {
+                "name": "MOTO G15 8/256 GRAVITY GRAY",
+                "quantity": 1,
+                "percentage": 0.01408450704
+            },
+            {
+                "name": "PAGAMENTO NUOVO(PDV)",
+                "quantity": 1,
+                "percentage": 0.01408450704
+            },
+            {
+                "name": "PELICULA HD HYDROGEL STANDARD",
+                "quantity": 2,
+                "percentage": 0.02816901408
+            },
+            {
+                "name": "POCO X8 PRO 5G 8/512 WHITE",
+                "quantity": 1,
+                "percentage": 0.01408450704
+            },
+            {
+                "name": "REALME C71 8/256 VIOLET PARROT",
+                "quantity": 3,
+                "percentage": 0.04225352113
+            },
+            {
+                "name": "REALME C71 8/256 WHITE SWAN",
+                "quantity": 3,
+                "percentage": 0.04225352113
+            },
+            {
+                "name": "REALME C85 8/256 KINGFISHER BLUE",
+                "quantity": 2,
+                "percentage": 0.02816901408
+            },
+            {
+                "name": "REALME C85 8/256 SWAN BLACK",
+                "quantity": 1,
+                "percentage": 0.01408450704
+            },
+            {
+                "name": "REALME NOTE 70 4/128 BEACH GOLD",
+                "quantity": 1,
+                "percentage": 0.01408450704
+            }
+        ]
+    },
     "mar2026": {
         "total": 86,
         "data": [
