@@ -179,7 +179,7 @@
                         onerror="this.src='https://placehold.co/40x40/0ea5e9/ffffff?text=PR'">
                 </div>
                 <div>
-                    <h1 class="text-white font-bold text-lg tracking-tight leading-none">Premium</h1>
+                    <h1 class="text-white font-bold text-lg tracking-tight leading-none">Kassouf</h1>
                     <span class="text-slate-400 text-xs font-medium">Enterprise Dashboard</span>
                 </div>
             </div>
@@ -705,13 +705,28 @@
 
         async function init() {
             try {
-                const response = await fetch('data.json');
-                const jsonData = await response.json();
+                // Carregar metadados (ordem de exibição)
+                const metaResponse = await fetch('dados/metadados.json');
+                const metaData = await metaResponse.json();
+                periodOrder = metaData._ordem_exibicao || [];
 
-                periodOrder = jsonData._ordem_exibicao || [];
-                periodOrder.forEach(k => {
-                    rawDatasets[k] = jsonData[k].data || [];
-                    periodLabels[k] = jsonData[k].label || k;
+                // Carregar dados de cada período
+                const loadPromises = periodOrder.map(async (key) => {
+                    try {
+                        const response = await fetch(`dados/${key}.json`);
+                        const data = await response.json();
+                        return { key, data };
+                    } catch (err) {
+                        console.error(`Erro ao carregar dados de ${key}:`, err);
+                        return { key, data: { total: 0, data: [] } };
+                    }
+                });
+
+                const results = await Promise.all(loadPromises);
+
+                results.forEach(({ key, data }) => {
+                    rawDatasets[key] = data.data || [];
+                    periodLabels[key] = data.label || key;
                 });
 
                 const selector = document.getElementById('period-selector');
@@ -738,7 +753,7 @@
                     loadPeriod(currentPeriod);
                 }
             } catch (error) {
-                console.error("Erro ao carregar data.json:", error);
+                console.error("Erro ao carregar metadados:", error);
                 document.getElementById('period-selector').innerHTML = '<option value="">Erro ao carregar dados</option>';
             }
         }
