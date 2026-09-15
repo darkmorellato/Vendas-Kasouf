@@ -9,7 +9,10 @@ Os dados estão organizados na pasta `dados/` com a seguinte estrutura:
 ```
 dados/
 ├── metadados.json          # Configuração global e ordem de exibição
-├── maio2026.json           # Dados de Maio 2026
+├── ago2026.json           # Dados de Agosto 2026
+├── jul2026.json           # Dados de Julho 2026
+├── jun2026.json           # Dados de Junho 2026
+├── maio2026.json          # Dados de Maio 2026
 ├── abril2026.json          # Dados de Abril 2026
 ├── mar2026.json            # Dados de Março 2026
 ├── fev2026.json            # Dados de Fevereiro 2026

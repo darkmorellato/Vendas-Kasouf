@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 
 <head>
@@ -448,7 +448,7 @@
                         <i data-lucide="bar-chart-2" class="h-5 w-5 text-stone-400"></i>
                         <div>
                             <h3 class="text-lg font-serif font-bold text-stone-900">Comparativo por Categoria</h3>
-                            <p class="text-xs text-stone-400 mt-0.5 uppercase tracking-[0.15em]">Fev 2026 vs Jan 2026 — unidades por categoria</p>
+                            <p id="category-compare-subtitle" class="text-xs text-stone-400 mt-0.5 uppercase tracking-[0.15em]">Comparativo — unidades por categoria</p>
                         </div>
                     </div>
                     <div id="categoryCompareChart" style="width:100%;height:380px;overflow-x:auto;"></div>
@@ -461,7 +461,7 @@
                     </div>
                     <div class="overflow-x-auto pb-4">
                         <table class="w-full text-left text-sm text-stone-600">
-                            <thead class="text-[11px] uppercase font-bold text-stone-400 border-b border-stone-200">
+                            <thead id="comparison-table-head" class="text-[11px] uppercase font-bold text-stone-400 border-b border-stone-200">
                                 <tr>
                                     <th class="py-5 pr-8 tracking-[0.15em]">Categoria</th>
                                     <th class="px-4 py-5 text-center tracking-[0.15em]">Fev 2026</th>
@@ -1125,6 +1125,15 @@
             const allCats = new Set([...currentData.map(d => d.category), ...comparisonData.map(d => d.category)]);
             const tablePeriods = periodOrder.slice(0, 5);
 
+            const thead = document.getElementById('comparison-table-head');
+            if (thead) {
+                thead.innerHTML = `<tr>
+                    <th class="py-5 pr-8 tracking-[0.15em]">Categoria</th>
+                    ${tablePeriods.map(p => `<th class="px-4 py-5 text-center tracking-[0.15em]">${periodLabels[p] || p}</th>`).join('')}
+                    <th class="px-4 py-5 text-right tracking-[0.15em]">Δ Mensal</th>
+                </tr>`;
+            }
+
             const tbody = document.getElementById('comparison-table-body');
             const sortedCats = Array.from(allCats).sort();
 
@@ -1279,6 +1288,11 @@
 
             const lblCurr = periodLabels[currP] || currP;
             const lblPrev = periodLabels[prevP] || prevP;
+
+            const compareSubtitle = document.getElementById('category-compare-subtitle');
+            if (compareSubtitle) {
+                compareSubtitle.textContent = `${lblCurr} vs ${lblPrev} — unidades por categoria`;
+            }
 
             const bSvg = `
             <svg viewBox="0 0 ${bw} ${bh}" class="w-full h-full min-w-[700px]">
